@@ -114,7 +114,7 @@
         app.use('/admin', admin)
         app.use('/usuarios', usuarios)
 // Others
-const PORT = 8080
+const PORT = 3000
 app.listen(PORT, () => {
     console.log("Servidor rodando")
 })
