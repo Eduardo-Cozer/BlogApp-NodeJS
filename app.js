@@ -32,7 +32,6 @@
             res.locals.error_msg = req.flash("error_msg") 
             res.locals.error = req.flash("error")
             res.locals.user = req.user || null
-            //req.local.isAdmin = req.user ? req.user.isAdmin == 1 ? req.user.isAdmin:0:null
             next()
         })
     //  Body Parser
