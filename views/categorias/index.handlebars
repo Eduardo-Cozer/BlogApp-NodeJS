@@ -1,0 +1,14 @@
+{{#if user}}
+    <h4>Categorias: </h4>
+    {{#each categorias}}
+        <ul class="list-group">
+            <a href="/categorias/{{slug}}" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                <li class="list-group-item">{{nome}}</li>
+            </a>
+        </ul>
+    {{else}}
+        <h6>Não existe categoria registrada</h6>
+    {{/each}}
+{{else}}
+    <h5>Você deve estar logado para visualizar as categorias</h5>
+{{/if}}

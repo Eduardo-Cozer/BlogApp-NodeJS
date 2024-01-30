@@ -1,0 +1,29 @@
+
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">My Blog</h1>
+  <p class="lead">Um blog feito com NodeJs + Express e MongoDB</p>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie uma conta</a>
+</div>
+<hr>
+<h2>Postagens recentes: </h2>
+
+{{#if user}}
+    {{#each postagens}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h3>{{titulo}}</h3>
+            <p>{{descricao}}</p>
+            <a href="/postagem/{{slug}}"><button class="btn btn-outline-info">Leia mais</button></a>
+            <hr>
+            <small>Categoria: {{categoria.nome}}</small>
+            <br>
+            <small>Data de publicação: {{data}}</small>
+        </div>
+    </div>
+    {{else}}
+        <h5>Nenhuma postagem registrada</h5>
+    {{/each}}
+{{else}}
+    <h5>Você deve estar logado para visualizar as postagens</h5>
+{{/if}}
